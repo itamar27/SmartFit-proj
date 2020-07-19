@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container" id="formCon">
+  <form action="" method="POST">
+    {% csrf_token %}
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <input type="text" name="{{ form.name.html_name }}" {%if form.name.value != none %}value="{{ form.name.value }}" {%endif%} class="form-control"
+          placeholder="Workout name..."></input>
+      </div>
+      <div class="form-group col-md-6">
+        <input class="form-control" name="{{ form.desc.html_name }}" {%if form.name.value != none %}value="{{ form.desc.value }}" {%endif%}  
+          placeholder="Workout general description..."></input>
+      </div>
+    </div>
+
+    <div class="row">
+      <label for="customRange">Scale the workout 1-10</label>
+      <input type="range" name="{{ form.scale.html_name }}" value="{{ form.scale.value }}" class="custom-range"
+        id="customRange" min="0" max="10">
+      <output class="bubble"></output>
+    </div>
+
+    <div class="row" id="topRow">
+      <h5 class="col-md-8">
+        Exercises 
+      </h5>
+
+      <div class="col-md-4 d-flex">
+      
+      {% if form.name.value is None %}
+          <button type="button" class="btn addNewEx" title="Add new device">Add new</button>
+       {%else%}
+            <button type="button" class="btn createmore" title="Add new device">Add new</button>
+       {%endif%}
+      </div>
+    </div>
+
+    <div class="container">
+      {% include "workouts/_exercise.html" with index=1 name=form.ex_1_name sets=form.ex_1_sets reps=form.ex_1_reps desc=form.ex_1_desc exercises=exercises %}
+
+      {% if form.ex_2_name.value is not None %}
+      {% include "workouts/_exercise.html" with index=2 name=form.ex_2_name sets=form.ex_2_sets reps=form.ex_2_reps desc=form.ex_2_desc exercises=exercises %}
+      {% endif %}
+
+      {% if form.ex_3_name.value is not None %}
+      {% include "workouts/_exercise.html" with index=3 name=form.ex_3_name sets=form.ex_3_sets reps=form.ex_3_reps desc=form.ex_3_desc exercises=exercises %}
+      {% endif %}
+    </div>
+
+    <div class="row d-flex justify-content-center">
+      <button type="submit" class="btn col-md-1">Submit</button>
+    </div>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row headerRow allBox ">
+        <div class="col-md-3 text-center">
+            <h2>{{workout.name}}</h2>
+        </div>
+        <div class="col-md-6 text-center" id="General">
+            <h4>General Description</h4>
+            <p>{{workout.desc}}</p>
+        </div>
+        <div class="col-md-3 text-center" id="Difficulty">
+            <h4>Difficulty</h4>
+            <p>{{workout.scale}}</p>
+        </div>
+    </div>
+
+    <div class="row  justify-content-center ">
+        {% for ex in list %}
+        {%  if ex.name != null%}
+        <div class="col-md-2 cardWO allBox text-center">
+
+                <h3>Ex {{forloop.counter}}</h3>
+                <p> {{ex.name}}</p>
+                <p>reps: {{ex.reps}}</p>
+                <p>sets: {{ex.sets}}</p>
+                {%if ex.desc != ''%}<p>{{ex.desc}}</p>{%endif%}
+        </div>
+        {%endif%}
+        {%endfor%}
+    </div>
+
+    <a href="{% url 'home.index' %}"> Back to Home page</a>
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,298 @@
+*{
+    padding:0 ;
+    margin:0 ;
+}
+
+html{
+    height:100%;
+}
+
+body{
+  background: url("../images/bg-min.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+a:hover h4{
+  font-weight: bolder;  
+}
+
+a:hover h6{
+    font-weight: bolder;  
+}
+
+
+  
+button{
+    color: #D45812 !important;
+    font-size: 15px;
+    background-color: #04323F !important;
+}
+
+button:hover{
+    font-weight: bolder;
+}
+
+
+#mainContainer{
+    margin-bottom: 50px;
+}
+
+
+.jumbotron{
+    background-color: #04323F   !important;
+    margin-bottom:0;   
+}
+
+.jumbotron a{
+    display: block;
+    background: url("../images/logo.png") no-repeat;
+    width: 201.2px;
+    height: 85px;
+}
+
+.navbar{
+    background-color: rgb(10, 81, 100) !important;
+}
+
+footer{
+    bottom:0;
+    background-color: #04323F; 
+    color: #D45812;
+}
+
+.card{
+    border: 1px solid black; 
+    border-radius: 20px;
+    background: none !important;
+}
+
+
+.workoutBtn{
+    margin-top:10px ;
+    margin-left:10px ;   
+}
+
+.navbar b{
+    color: #D45812; 
+}
+/*-------------------Icon----------------------------------*/
+#iconTrainer{
+    background: url("../images/iconTrainer.png") no-repeat ;
+    display: block;
+    height:60px;
+    color: black !important;
+    font-size: 15px;
+    padding-top:20px;
+    padding-left:65px;
+}
+
+#iconTrainee{
+    background: url("../images/iconTrainee.png") no-repeat ;
+    display: block;
+    height:60px;
+    color: black !important;
+    font-size: 15px;
+    padding-top:20px;
+    padding-left:65px;
+}
+
+/*---------------------------Workout list index----------------------*/
+.row{
+    flex-grow: 1;
+}
+
+
+.checked {
+    color: #ffc700;
+  }
+
+  span{
+      margin-left:5px;
+  }
+
+  nav .container a{
+      padding-top: 15px;
+  }
+
+ form input {
+        color: #D45812 !important;
+        font-size: 15px;
+        background-color: transparent;
+    }
+ 
+/*--------------------form---------------------------------*/
+
+form label{
+    font-weight: bold;
+}
+
+#formCon{
+    padding-top:10px;
+}
+
+#topRow{
+    margin-bottom: 10px;
+}
+
+#topRow div{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: flex-end;
+}
+
+.addNewEx{   
+    margin-right: 8px;
+}
+
+/*---------------------smartFit motivation-----------------*/
+#smartfitHeader{
+    font-family: 'Orbitron',sans-serif;
+     font-size:55px;
+}
+
+
+/*--------------------------Map--------------------------*/
+
+#map{
+    background: url("../images/map3.png") no-repeat;
+    display: block;
+    width: 420px;
+    height: 450px;
+    text-decoration: none;
+}
+
+
+/*--------------------Workouts cards------*/
+
+.workoutList{
+    padding-top:10px;
+    margin-top:10px;
+}
+
+.workoutList a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/*---------------- workout Details---------------*/
+.allBox{
+    border: 1px solid black;
+    border-radius:6px;
+    background:rgb(4, 50, 63,0.4) !important;
+}
+
+
+.allBox h4, h3, h2{
+    color: #D45812;
+}
+
+#update{
+    color: #D45812;
+}
+
+.headerRow{
+    margin-top:20px;
+}
+
+.headerRow h4{
+    color: #D45812;
+}
+
+.cardEx{
+    justify-content: space-between !important;
+}
+
+.cardWO{
+    margin:50px;
+    padding-top: 10px;
+    font-weight: bolder;
+}
+
+#rating h4{
+    padding: 8px 8px 0px 8px;
+}
+
+/*----------Login Form-------*/
+#login .container #login-row #login-column #login-box {
+    margin-top: 120px;
+    max-width: 600px;
+    height: 320px;
+    border: 1px solid #9C9C9C;
+    border-radius: 10px;
+    background-color: rgb(10, 81, 100);
+  }
+  #login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+  }
+  #login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -85px;
+  }
+  .form-group label{
+    color: #D45812;
+    font-weight:normal;
+  }
+
+  /*-------------Registraion form---------*/
+  *[role="form"] {
+    max-width: 530px;
+    padding: 15px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: rgba(10, 81, 100,0.9);
+}
+
+*[role="form"] h2 { 
+    margin-bottom: 25px;
+    font-size: 40px;
+    font-weight: 600;
+    color: #D45812;
+    margin-top: 5%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+#mainContainer *[role="form"]{
+    margin-top:120px;
+}
+
+.form-group .col-md-4 label{
+    margin-right:7px;
+}
+
+#hint_id_password1 li{ list-style-type: none;}
+
+form small a{margin-left: 5px;}
+/*--------- Media query-------*/
+@media (max-width:577px)
+{
+    #duplicator1{
+        margin-top:5px;
+        margin-bottom:5px;
+    }
+
+    .cardWO{
+        margin:10px auto;
+        width: 60% !important;
+    }
+
+  #map{
+        display:none;
+    }
+    /*-----------login---------*/
+    #login .container #login-row #login-column #login-box {
+        height:350px;
+    }
+
+    /*---------Registration Form----*/
+    *[role="form"] h2 { 
+        font-size:30px;
+    }
+
+  
+
+}

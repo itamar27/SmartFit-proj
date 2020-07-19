@@ -1,0 +1,39 @@
+<div class="form-row" id="duplicator{{index}}"  > 
+  <h6 class="col-md-1 block-center text-center">Ex {{ index }}</h6>
+
+  <div class="col-md-3">
+    <select name="{{ name.html_name }}" class="form-control exercises-list">
+      <option>choose device...</option>
+      {% if exercises is not None %}
+        {% for exercise in exercises %}
+          <option {% if name.value == exercise.name %} selected {% endif %} value="{{ exercise.name }}">{{ exercise.name }}
+          </option>
+        {% endfor %}
+      {% endif %}
+    </select>
+  </div>
+
+  <div class="form-group col-md-2">
+    <select name="{{ sets.html_name }}" class="form-control">
+      <option {% if sets.value is None %}selected{% endif %}>Number of sets...</option>
+      <option {% if sets.value == "1" %}selected{% endif %} value="1">1</option>
+      <option {% if sets.value == "2" %}selected{% endif %} value="2">2</option>
+      <option {% if sets.value == "3" %}selected{% endif %} value="3">3</option>
+      <option {% if sets.value == "4" %}selected{% endif %} value="4">4</option>
+    </select>
+  </div>
+
+  <div class="form-group col-md-2">
+    <select name="{{ reps.html_name }}" class="form-control">
+      <option {% if reps.value is None %}selected{% endif %}>Repeats...</option>
+      <option {% if reps.value == "6" %}selected{% endif %} value="6">6</option>
+      <option {% if reps.value == "8" %}selected{% endif %} value="8">8</option>
+      <option {% if reps.value == "10" %}selected{% endif %} value="10">10</option>
+      <option {% if reps.value == "12" %}selected{% endif %} value="12">12</option>
+    </select>
+  </div>
+
+  <div class="form-group col-md-4">
+    <input name="{{ desc.html_name }}" class="form-control" placeholder="Description..." value="{% if desc.value is not None %}{{ desc.value }}{% endif %}" />
+  </div>
+</div>
